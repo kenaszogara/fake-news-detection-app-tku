@@ -1,0 +1,97 @@
+
+@media (min-width: 700px){
+    .navbar, .navbar-spacer {
+        display: block;
+        width: 100%;
+        height: 6.5rem;
+        background: #fff;
+        z-index: 99;
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+    }
+
+    .row {
+        margin-left: 17.3333333333%;
+        margin-right: 17.3333333333%;
+        text-align: center;
+    }
+
+    .navbar-item {
+        position: relative;
+        float: left;
+        margin-bottom: 0;
+    }
+
+    .navbar-link {
+        text-transform: uppercase;
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: .2rem;
+        margin-right: 35px;
+        text-decoration: none;
+        line-height: 6.5rem;
+        color: #222;
+    }
+
+    .navbar-list {
+        list-style: none;
+        margin-bottom: 0;
+    }
+    .push-bottom{
+        margin-bottom: 18rem;
+    }
+}
+h5{
+    margin-top: 5rem;
+}
+
+.title{
+    font-family: 'Fauna One';
+    text-align: center
+}
+
+.row{
+    padding: 25px;
+    padding-bottom: 25px;
+}
+
+.header{
+    text-align: center;
+}
+
+.prettyprint {
+    background: #fff;
+    font-family: Menlo, 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', Monaco, Consolas, monospace;
+    font-size: 1.2rem;
+    padding: 2.5rem 3rem;
+    -webkit-font-smoothing: antialiased;
+}
+
+.section-sm {
+    padding: 3px;
+}
+
+.footer{
+    border: 0;
+    margin-top: 5rem;
+    margin-bottom: 0;
+    width: 100%;
+    background-color: rgb(188, 171, 171);
+
+}
+
+body{
+    background-color: white;
+    background-repeat:repeat;
+    background-size:cover;
+    background-position:center;
+    font-family: 'Fauna One', 'Poppins', 'Arvo', 'Fredoka One', 'Titan One', 'Inconsolata', 'Alef', sans-serif, monospace, serif, cursive;
+    
+}
+.navbar{
+    background-color: rgb(188, 171, 171);
+}
+p{
+    font-family: 'Arvo', serif;
+    font-size: 18px;
+}
