@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <meta name="description" content="Tamkang University, Lanyang Campus, PWA">
+    <meta name="author" content="tralaladudut">
+
+    <title>Fake - {% block title %}{% endblock %}</title>
+
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css?family=Alef|Arvo|Fauna+One|Fredoka+One|Inconsolata:400,700|Poppins|Titan+One"
+        rel="stylesheet">
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename='css/normalize.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/skeleton.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/custom.css')}}">
+
+    <!-- FAVICON -->
+    <link rel="icon" href="{{url_for('static', filename='images/logo.jpg')}}">
+</head>
+
+<style>
+    
+</style>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container">
+            <ul class="navbar-list">
+                <li class="navbar-item">
+                    <a class="navbar-link" href="{{url_for('home_page')}}">Home</a>
+                </li>
+                <li class="navbar-item">
+                    <a class="navbar-link" href="{{url_for('demo_page')}}">Demo</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    
+    {% block header %}{% endblock %}
+    {% block body %}{% endblock %}
+
+    <!-- app script -->
+    <script>
+        function loader() { 
+            document.getElementById("inputForm").style.display = "none"; 
+            document.getElementById("resultForm").style.display = "block"; 
+        }
+        function trimField(str) {
+            return str.replace(/^\s+|\s+$/g, '');
+        }
+        function validate() {
+            var txt_area = document.getElementById('article_content');
+
+            if(trimField(txt_area.value) == ''){
+                alert("Empty field! Please provide article's content before submitting! :))");
+                txt_area.focus();
+                return false;
+            } else {
+                loader();
+                return true;
+            }
+        }
+    </script>
+
+</body>
