@@ -1,0 +1,68 @@
+{% extends 'base.html' %}
+
+<!-- title -->
+{% block title %}
+    Home Page
+{% endblock %}
+
+<!-- body -->
+{% block body %}
+
+    <style>
+        @media (min-width: 700px){
+            .header{
+                margin-top: 8rem;
+            }
+            .space {
+                margin-top: 8rem;
+            }
+            textarea {
+                min-height: 280px;
+            }
+            .loading-template{
+                margin-top: 8rem;
+                text-align: center;
+                padding: 40px 15px;
+            }
+            .loading-details{
+                text-align: center;
+            }
+            .custom-align{
+                text-align: center;
+            }
+        }
+        
+        label{
+            padding-left: 8px;
+            margin-bottom: 0;
+            background-color: whitesmoke;
+        }
+    </style>
+    
+    <div class="container">
+        <section class="header">
+            <h2 class="title">Fake News Detection App</h2>
+        </section>
+
+        <div id="inputForm" class="space">
+            <form id="submit_form" class="twelve columns" method="POST" onsubmit="return validate();" action="{{url_for('article_result')}}">
+                <label for="linkInput">Article's Content:</label>
+                <textarea name="text" id="article_content" class="u-full-width" type="text" placeholder="input news content here..."></textarea>
+                <div class="custom-align push-bottom">
+                    <button class="button-primary button" type="submit" id="checkBtn">Check</button>
+                </div>
+            </form>
+        </div>
+        
+        
+        <div id="resultForm" class="loading-template" style="display: none">
+            <img src="{{url_for('static', filename='images/sushi_loading.gif')}}" loop=infinite />
+            <h4>Preparing to process the article . . .</h2>
+                <div class="loading-details push-bottom">
+                    Delivering a tray of sashimi, rolling and cutting the sushi, preparing the slices
+                </div>
+        </div>
+
+    </div>
+
+{% endblock %}

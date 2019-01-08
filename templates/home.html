@@ -1,0 +1,139 @@
+{% extends 'base.html' %}
+
+<!-- title -->
+{% block title %}About{% endblock %}
+
+{% block body %}
+
+<style>
+    @media (min-width: 700px) {
+        header {
+            margin-top: 8rem;
+        }
+
+        .sub-header {
+            background-color: whitesmoke;
+        }
+        .post-header{
+            text-align: center;
+        }
+
+    }
+    .about-content{
+        text-align: justify;
+    }
+    .margin-tab{
+        margin-left: 3rem;
+    }
+    b:hover{
+        color:dodgerblue;
+    }
+    
+   
+</style>
+
+<div class="row">
+    <header class="title">
+        <h2 class="post-header">ABOUT</h1>
+        <h4 class="sub-header">&quot;Identifying Fake News with Machine Learning Algorithm&quot;</h4>
+    </header>
+    <main class="about-content">
+        <p> </p>
+        <p>
+            Fake news has been around for a certain time and then it has always been a problem
+        but not many people thought of it as big of a problem. The main reason why we made this program is
+        because people depend on news to keep informed and they are terrible at differentiating real
+        and fake news.
+        </p>
+        <p>
+            We have seen that the damage from fake news is disastrous, and we want to provide a workable solution
+        to help solve fake news detection problem. We think if people are not able to detect it themselves,
+        then machines might do the job for us.
+        </p>
+        <p>So thats why we decided to create this <b>"Fake News Detection App"</b></p>
+        <p>
+        We hope that by making this app, we can help many people to identify fake news 
+        at its detection stage, and by doing so we hope that people will realize how disastrous
+        fake news is, and will take fake news seriously.
+        </p>
+        <p class="push-bottom"></p>
+
+        <h3 class="sub-header">Fake News Detection App!</h3> 
+        <p>Just copy the article into the textbox and let the Fake News Maching Learning Algorithm check it for you!</p>
+        <p>
+            How to use:
+        </p>
+        <ul class="margin-tab push-bottom">
+            <li>Step 1: Find the article on the internet which you want to check for</li>
+            <li>Step 2: Copy whole article's content into the textbox</li>
+            <li>Step 3: Click the &quot;Check&quot; button to check</li>
+            <li>Step 4: And you will get your result!</li>
+        </ul>
+
+        <h3 class="sub-header">How It Works:</h3>
+        <p>
+            We are using <b>Python</b> as our core programming langguage,
+            and with the help of <b>Flask</b> to communicate with the <b>HTML</b> webpage, 
+            we deliver our app in a user-friendly and responsive web application.
+        </p>
+        <p>
+            We create our program with a machine learning algorithm packages from <b>Scikit-learn</b>.
+            The packages that we are using can be found <a>here</a>.
+            We train our machine to detect fake news of US political news with only US political news dataset.
+            We are using text-preprocessing, to process raw news, so we can get text calssification for the machine learning algorithm to analyze.
+            Then our machine will give in return the probability score which indicates the precentage 
+            that the news is likely to be real.
+        </p>
+        <h4>Dataset</h4>
+        <p>
+            We trained our machine with 3 datasets that we acquired from the internet. 
+            These datasets are available online and are widely used in some recent machine learning project.
+        </p>
+        <ul>
+            <li>
+                <a>Fake_or_Real_News Dataset</a>
+            </li>
+            <li>
+                <a>LIAR Dataset</a>
+            </li>
+            <li>
+                <a>Kaggle Dataset</a>
+            </li>
+        </ul>
+        <h4>Text Preprocessing</h4>
+        <p>
+            Text cleaning is important for our machine to classify the news keywords.
+            The machine process the article by:
+        </p>
+        <ul>
+            <li>making it lowercase</li>
+            <li>removing punctuation and stopwords</li>
+            <li>lemmatization: transforming words into its simplest form</li>
+        </ul>
+        <h4>Feature Extraction</h4>
+        <p>
+            Then we extract features from the cleaned article using <b>Term Frequency-Inverse Document Frequency</b>.
+            One of widely used features extraction algorithm used in machine learning. 
+        </p>
+        <h4>Classification</h4>
+        <p>
+            We then classify the extracted features into <b>Support Vector Classifier</b>.
+        </p>
+    </main>
+</div>
+
+
+<!-- Footer -->
+<section class="footer section-sm">
+    <div class="container">
+        <h5>Greetings! From Dev Team!</h5>
+        <ul>
+            <li>Zang Suxin</li>
+            <li>Hannah Fakatou</li>
+            <li>Meng-Tsen Hsieh</li>
+            <li>Kazushige Sato</li>
+            <li>Zogara Kenas</li>
+        </ul>
+    </div>
+</section>
+{% endblock %}

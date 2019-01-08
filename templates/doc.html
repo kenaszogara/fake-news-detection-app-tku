@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+<!-- title -->
+{% block title %}Documentation{% endblock %}
+
+{% block body %}
+<style>
+    @media (min-width: 700px){
+        header{
+            margin-top: 8rem;
+        }
+        .container{
+                margin-bottom: 18rem;
+            }
+    }
+    .doc-content{
+        text-align: center;
+    }
+    .featured-image-wrap {
+        max-width: 100%;
+        max-height: 100%; 
+    }
+    img{
+        max-height: 320px;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+</style>
+
+<div class="row">
+    <header class="title">
+        <h2>DOCUMENTATION</h1>
+    </header>
+    <main class="doc-content">
+        <p>Well right now the documentation page is still empty!
+            But we are doing it right now and we hope we can feel it soon!
+        </p>
+    </main>
+    <div class="featured-image-wrap push-bottom">
+        <img>
+    </div>
+</div>
+
+{% endblock %}

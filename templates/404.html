@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+<!-- title -->
+{% block title %}
+    404
+{% endblock %}
+
+<!-- body -->
+{% block body %}
+    <style>
+        .error-template {
+            padding: 40px 15px;
+            text-align: center;
+        }
+
+        .error-actions {
+            margin-top: 15px;
+            margin-bottom: 15px;
+        }
+
+        .error-actions .btn {
+            margin-right: 10px;
+        }
+
+        .vertical-center {
+            min-height: 80%;
+            min-height: 80vh;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+    </style>
+
+    <div class="container vertical-center">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="error-template">
+                    <img src="{{url_for('static', filename='images/sushi_404.gif')}}" loop=infinite />
+                    <h1>Oops!</h1>
+                    <h2>404 Not Found</h2>
+
+                    <div class="error-details">
+                        Sorry, an error has occured, Requested page not found!
+                    </div>
+
+                    <div class="error-actions">
+                        <a href="{{url_for('home_page')}}" class="btn btn-primary btn-lg">
+                            <span class="glyphicon glyphicon-home"></span>Take Me Home </a>
+
+                        <a href="{{url_for('about_page')}}" class="btn btn-default btn-lg">
+                            <span class="glyphicon glyphicon-envelope"></span>Contact Support </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

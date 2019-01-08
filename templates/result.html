@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+<!-- title -->
+{% block title %}
+    Result
+{% endblock %}
+
+<!-- body -->
+{% block body %}
+    <style>
+        @media (min-width: 700px) {
+            .result-template {
+                text-align: center;
+                margin-top: 5rem;
+            }
+            .row-space {
+                margin-top: 3rem;
+            }
+        }
+    </style>
+    
+    <div class="container">
+        <form id="resultForm" class="result-template" method="GET" action="{{url_for('home_page')}}">
+            {% if this > 50.0 %}
+                <img src="{{url_for('static', filename='images/sushi_good_result.gif')}}" loop=infinite />
+            {% else %}
+                <img src="{{url_for('static', filename='images/sushi_bad_result.gif')}}" loop=infinite />
+            {% endif %}
+            <h4>Your article result is</h4>
+            <h1 class="">{{value}}% TRUE! </h1>
+            <div class="row-space"></div>
+            <button class="button-primary button" type="submit">Try Again</button>
+        </form>
+    </div>
+{% endblock %}
