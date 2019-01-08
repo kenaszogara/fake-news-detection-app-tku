@@ -32,7 +32,7 @@ $pip install -r requirements.txt
 
 * **Zhang Suxin** - *Initial work* - [Shoot-to-root](https://github.com/Shoot-to-root)
 
-* **Zogara Kenas** - *Contributor* - [Tralaladudut] (https://github.com/tralaladudut)
+* **Zogara Kenas** - *Contributor* - [Tralaladudut](https://github.com/tralaladudut)
 
 ## License
 
