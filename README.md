@@ -30,9 +30,9 @@ $pip install -r requirements.txt
 
 ## Authors
 
-* **Zhang Suxin** - *Initial work* - [Shoot-to-root](https://github.com/Shoot-to-root)
-
+* **Chong Su Xin** - *Initial work* - [Shoot-to-root](https://github.com/Shoot-to-root)
 * **Zogara Kenas** - *Contributor* - [Tralaladudut](https://github.com/tralaladudut)
+* **Hannah Fakatou** - *Contributor* - [Langi17](https://github.com/langi17)
 
 ## License
 
