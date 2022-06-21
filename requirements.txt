@@ -29,7 +29,7 @@ markupsafe==1.1.0         # via jinja2
 matplotlib==3.0.2
 mccabe==0.6.1             # via pylint
 nltk==3.4                 # via textblob
-numpy==1.15.4             # via gensim, matplotlib, pandas, scikit-learn, scipy, spectral
+numpy==1.22.0             # via gensim, matplotlib, pandas, scikit-learn, scipy, spectral
 pandas==0.23.4
 pip-tools==3.2.0
 pipdeptree==0.13.1
