@@ -10,7 +10,7 @@ boto3==1.9.75             # via smart-open
 boto==2.49.0              # via smart-open
 botocore==1.12.75         # via boto3, s3transfer
 bz2file==0.98             # via smart-open
-certifi==2018.11.29       # via requests
+certifi==2022.12.7       # via requests
 chardet==3.0.4            # via requests
 click==7.0                # via flask, pip-tools
 colorama==0.4.1           # via pylint
